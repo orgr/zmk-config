@@ -73,7 +73,7 @@
                               &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &mo LOWER  &kp RET       &kp SPACE  &mo RAISE  &kp RIGHT_GUI  &kp RALT   &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&scroll_horizontal>, <&scroll_vertical>;
         };
 
         lower_layer {
@@ -95,7 +95,9 @@
                       &trans     &trans    &trans    &trans     &trans    &kp UNDERSCORE  &trans     &trans    &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_horizontal>, <&scroll_vertical>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         raise_layer {
