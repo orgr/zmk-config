@@ -63,6 +63,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        twotap_capsword: twotap_capsword {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TWOTAP_CAPSWORD";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&caps_word>;
+        };
     };
 
     combos {
@@ -100,17 +107,12 @@
 
         tr_alt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <4 5>;
+            key-positions = <16 17>;
         };
 
         yu_alt {
             bindings = <&kp RIGHT_ALT>;
-            key-positions = <6 7>;
-        };
-
-        capslock {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <36 49>;
+            key-positions = <18 19>;
         };
     };
 
@@ -131,7 +133,7 @@
 &kp GRAVE             &kp N1  &kp N2            &kp N3    &kp N4        &kp N5                                                                    &kp N6                           &kp N7         &kp N8     &kp N9             &kp N0    &none
 &kp TAB               &kp Q   &kp W             &kp E     &kp R         &kp T                                                                     &kp Y                            &kp U          &kp I      &kp O              &kp P     &kp BSPC
 &mt LEFT_CONTROL ESC  &kp A   &kp S             &kp D     &kp F         &kp G                                                                     &kp H                            &kp J          &kp K      &kp L              &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
-&kp LSHFT             &kp Z   &kp X             &kp C     &kp V         &kp B                            &kp C_MUTE          &kp K_PLAY_PAUSE     &kp N                            &kp M          &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
+&twotap_capsword      &kp Z   &kp X             &kp C     &kp V         &kp B                            &kp C_MUTE          &kp K_PLAY_PAUSE     &kp N                            &kp M          &kp COMMA  &kp DOT            &kp FSLH  &twotap_capsword
                               &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &layer_hold_layer_tap_stick 2 1  &mt LEFT_GUI RET    &mt RIGHT_GUI SPACE  &layer_hold_layer_tap_stick 2 1  &kp RIGHT_GUI  &kp RALT   &kp RIGHT_CONTROL
             >;
 
@@ -175,10 +177,10 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans          &trans          &trans        &trans     &trans      &trans
-&kp LS(TAB)  &trans        &trans        &trans        &trans        &trans                          &trans          &trans          &trans        &trans     &kp DELETE  &trans
-&trans       &trans        &trans        &trans        &trans        &trans                          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans      &trans
-&trans       &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans        &trans     &trans      &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans          &trans          &trans        &trans     &trans  &trans
+&kp LS(TAB)  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                          &kp N6          &kp N7          &kp N8        &kp N9     &kp N0  &trans
+&trans       &trans        &trans        &trans        &trans        &trans                          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans       &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans        &trans     &trans  &trans
                            &trans        &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans        &trans
             >;
 
