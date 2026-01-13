@@ -171,6 +171,8 @@
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp C_BRI_DN C_BRI_UP>;
+
+            label = "qwerty";
         };
 
         colemak_dh {
@@ -181,6 +183,8 @@
 &trans  &kp Z   &kp X   &kp C   &kp D   &kp V   &trans    &trans  &kp K   &kp H   &trans  &trans  &trans    &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "colemak dh";
         };
 
         custom {
@@ -191,10 +195,12 @@
 &trans  &kp J   &kp K   &kp C   &kp D   &kp V    &trans    &trans  &kp X    &kp H   &trans  &trans  &trans    &trans
                 &trans  &trans  &trans  &lt 3 H  &trans    &trans  &lt 3 L  &trans  &trans  &trans
             >;
+
+            label = "custom";
         };
 
-        lower_layer {
-            display-name = "lower";
+        symbols {
+            display-name = "symbols";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
