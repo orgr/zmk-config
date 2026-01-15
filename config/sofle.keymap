@@ -31,8 +31,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <3 4>;
-            then-layer = <5>;
+            if-layers = <4 5>;
+            then-layer = <6>;
         };
     };
 
@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "HOLD_SYMBOLS_DOUBLE_TOGGLE_NAV";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&tog 4>;
+            bindings = <&mo 4>, <&tog 5>;
         };
 
         mod_sticky: mod_sticky {
@@ -132,7 +132,7 @@
         };
 
         nav_layer_combo {
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
             key-positions = <28 27>;
         };
 
@@ -165,7 +165,7 @@
 &kp TAB               &kp Q   &kp W             &kp E     &kp R         &kp T                                                   &kp Y   &kp U          &kp I      &kp O              &kp P     &kp BSPC
 &mt LEFT_CONTROL ESC  &kp A   &kp S             &kp D     &kp F         &kp G                                                   &kp H   &kp J          &kp K      &kp L              &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
 &shift_doublecaps     &kp Z   &kp X             &kp C     &kp V         &kp B        &kp C_MUTE            &kp K_PLAY_PAUSE     &kp N   &kp M          &kp COMMA  &kp DOT            &kp FSLH  &shift_doublecaps
-                              &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &lt 3 COLON  &mt LEFT_GUI ENTER    &mt RIGHT_GUI SPACE  &mo 3   &kp RIGHT_GUI  &kp RALT   &kp RIGHT_CONTROL
+                              &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &lt 4 COLON  &mt LEFT_GUI ENTER    &mt RIGHT_GUI SPACE  &mo 4   &kp RIGHT_GUI  &kp RALT   &kp RIGHT_CONTROL
             >;
 
             sensor-bindings =
@@ -184,19 +184,30 @@
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
-            label = "colemak dh";
+            label = "clmk dh";
         };
 
-        custom {
+        colemak_custom {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans   &trans  &trans  &trans  &trans    &to 0
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans   &trans  &trans  &trans  &trans    &to 3
 &trans  &kp Q   &kp W   &kp F   &kp P   &kp B                     &kp Z    &kp L   &kp U   &kp Y   &kp SEMI  &trans
 &trans  &kp A   &kp R   &kp S   &kp T   &kp G                     &kp M    &kp N   &kp E   &kp I   &kp O     &trans
 &trans  &kp J   &kp K   &kp C   &kp D   &kp V   &trans    &trans  &kp X    &kp H   &trans  &trans  &trans    &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &lt 3 H  &kp L   &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &lt 4 H  &kp L   &trans  &trans
             >;
 
-            label = "custom";
+            label = "clmk cstm";
+        };
+
+        aptmak {
+            label = "aptmak";
+            bindings = <
+&trans  &trans         &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans    &to 0
+&trans  &kp V          &kp W   &kp F   &kp P   &kp B                      &kp J   &kp L   &kp U   &kp Y   &kp SEMI  &trans
+&trans  &kp R          &kp S   &kp T   &kp H   &kp K                      &kp X   &kp N   &kp A   &kp I   &kp O     &trans
+&trans  &kp LS(COLON)  &kp C   &kp G   &kp D   &kp Q    &trans    &trans  &kp Z   &kp M   &trans  &trans  &trans    &trans
+                       &trans  &trans  &trans  &lt 4 E  &trans    &trans  &mo 4   &trans  &trans  &trans
+            >;
         };
 
         symbols {
