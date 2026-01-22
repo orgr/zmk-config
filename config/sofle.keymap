@@ -203,9 +203,9 @@
             label = "aptmak";
             bindings = <
 &trans  &trans         &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans    &to 0
-&trans  &kp V          &kp W   &kp F   &kp P   &kp B                      &kp J   &kp L   &kp U   &kp Y   &kp SEMI  &trans
+&trans  &kp V          &kp W   &kp F   &kp P   &kp B                      &kp Q   &kp L   &kp U   &kp Y   &kp SEMI  &trans
 &trans  &kp R          &kp S   &kp T   &kp H   &kp K                      &kp X   &kp N   &kp A   &kp I   &kp O     &trans
-&trans  &kp LS(COLON)  &kp C   &kp G   &kp D   &kp Q    &trans    &trans  &kp Z   &kp M   &trans  &trans  &trans    &trans
+&trans  &kp LS(COLON)  &kp C   &kp G   &kp D   &kp J    &trans    &trans  &kp Z   &kp M   &trans  &trans  &trans    &trans
                        &trans  &trans  &trans  &lt 4 E  &trans    &trans  &mo 4   &trans  &trans  &trans
             >;
         };
