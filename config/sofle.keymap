@@ -24,6 +24,16 @@
 
 &nice_view_spi { cs-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>; };
 
+&mt {
+    flavor = "balanced";
+    require-prior-idle-ms = <115>;
+};
+
+&lt {
+    flavor = "balanced";
+    require-prior-idle-ms = <115>;
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
